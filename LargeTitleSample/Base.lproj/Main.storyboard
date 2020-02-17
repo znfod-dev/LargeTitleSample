@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fw2-rq-hwE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="33o-3a-5xo">
+            <objects>
+                <navigationController id="Fw2-rq-hwE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" backIndicatorTransitionMaskImage="chevron.left" catalog="system" id="r7R-3e-1Q0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OLc-d8-ph4" kind="relationship" relationship="rootViewController" id="hX6-wF-8Zy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sme-wB-Uxm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738" y="-79"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="XEg-Ds-Wg2">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="OLc-d8-ph4" customClass="ViewController" customModule="LargeTitleSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLq-vg-nDj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ij-0J-G4c">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OLc-d8-ph4" id="7fb-v1-fhg"/>
+                                    <outlet property="delegate" destination="OLc-d8-ph4" id="3Bp-Sq-yMv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4Ij-0J-G4c" secondAttribute="bottom" id="NDq-ue-IVA"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ij-0J-G4c" secondAttribute="trailing" id="bck-7Y-QWe"/>
+                            <constraint firstItem="4Ij-0J-G4c" firstAttribute="top" secondItem="gl6-iq-LE1" secondAttribute="top" id="tqk-vq-lui"/>
+                            <constraint firstItem="4Ij-0J-G4c" firstAttribute="leading" secondItem="gl6-iq-LE1" secondAttribute="leading" id="x2W-Zg-zb1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gl6-iq-LE1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="IJ0-aW-ehg">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="vmx-WQ-XWG"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="4Ij-0J-G4c" id="8w9-Nj-L8b"/>
+                        <segue destination="9Bg-f7-aJA" kind="show" id="nhk-Pq-Tip"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzn-mq-sYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318.84057971014494" y="-79.017857142857139"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="18M-2P-zME">
+            <objects>
+                <viewController storyboardIdentifier="Second" id="9Bg-f7-aJA" customClass="SecondVC" customModule="LargeTitleSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jmf-t3-x2U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cbg-AY-dYj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bic-Fl-9bt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5d-Pq-6c1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="-79"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+    </resources>
+</document>
